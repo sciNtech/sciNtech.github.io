@@ -1,0 +1,41 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Avenir Next;
+}
+
+input:focus {
+    outline: none;
+}
+
+#header {
+    width: 100%;
+    height: 80px;
+    background-color: #ff6b6b;
+    display: inline-flex;
+}
+
+#header #left {
+    position: absolute;
+    top: 25px;
+    left: 20px;
+}
+
+#header #left p {
+    margin: 0 30px;
+    color: white;
+    font-size: 20px;
+}
+
+#header #right {
+    position: absolute;
+    display: inline-flex;
+    top: 30px;
+    right: 20px;
+}
+
+#header #right p {
+    font-weight: 600;
+    margin: 0 50px;
+    color: white;
+}

@@ -15,7 +15,16 @@ function startTimer(duration, display) {
     }, 1000);
 }
 
+// window.onbeforeunload = function() {
+//     return "Are you sure you want to reload? You will lose time and points if you do so...";
+// }
+
 document.addEventListener("DOMContentLoaded", function() {
+
+    var gameIDBox = document.getElementById("game-code")
+    var gameID = document.getElementById
+
+    gameIDBox.style.visibility = "visible"
 
     var teamId = document.getElementById("teamID");
     var currency = document.getElementById("currency");

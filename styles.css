@@ -12,6 +12,14 @@ select:focus {
     outline: none;
 }
 
+#loginPage {
+    display: block;
+}
+
+#playgroundPage {
+    display: none;
+}
+
 #header {
     width: 100%;
     height: 80px;
@@ -72,6 +80,166 @@ select:focus {
 }
 
 #login-box #login {
+    width: 150px;
+    height: 45px;
+    margin: 10px auto;
+    border: none;
+    border-radius: 5px;
+    font-family: Avenir Next;
+    color: white;
+    font-weight: 600;
+    font-size: 17px;
+    background-color: #1dd1a1;
+}
+
+#playgroundPage #header {
+    width: 100%;
+    height: 80px;
+    background-color: #ff6b6b;
+    display: inline-flex;
+}
+
+#playgroundPage #header #left {
+    position: absolute;
+    top: 25px;
+    left: 30px;
+}
+
+#playgroundPage #header #left p {
+    margin: 0 30px;
+    color: white;
+    font-size: 20px;
+}
+
+#playgroundPage #header #right {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    display: inline-flex;
+}
+
+#playgroundPage #header #right p {
+    margin: 0 30px;
+    color: white;
+    font-size: 15px;
+}
+
+#playgroundPage #playground {
+    width: 80%;
+    min-height: 80%;
+    background-color: #54a0ff;
+    margin: 10px auto;
+    visibility: hidden;
+}
+
+#playgroundPage #game-code {
+    width: 300px;
+    height: 200px;
+    background-color: #feca57;
+    border-radius: 5px;
+    margin: 100px auto;
+    visibility: hidden;
+    text-align: center;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+#playgroundPage #game-code p {
+    color: white;
+    font-size: 17px;
+    padding: 10px 0 0 0;
+}
+
+#playgroundPage #game-code #gameID {
+    width: 250px;
+    height: 45px;
+    margin: 10px auto;
+    border: none;
+    border-radius: 5px;
+    font-family: Avenir Next;
+    color: gray;
+    font-size: 13px;
+    text-indent: 10px
+}
+
+#playgroundPage #game-code #confirmID {
+    width: 100px;
+    height: 45px;
+    border: none;
+    font-family: Avenir Next;
+    background-color: #ff6b6b;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+#playgroundPage #pg-textbox {
+    position: relative;
+    width: 80%;
+    min-height: 80%;
+    margin: 0 auto;
+    top: 20px;
+}
+
+#playgroundPage #pg-gamecode {
+    font-weight: 600;
+    font-size: 17px;
+    color: white;
+}
+
+#playgroundPage #pg-question {
+    font-size: 20px;
+    color: white;
+}
+
+#playgroundPage #pg-hint {
+    visibility: hidden;
+}
+
+#playgroundPage .pg-option {
+    font-weight: 500;
+    font-size: 17px;
+    color: white;
+}
+
+#playgroundPage #answerDiv p {
+    color: white;
+    font-size: 17px;
+    padding-right: 10px;
+}
+
+#playgroundPage #answerBox {
+    width: 50px;
+    height: 40px;
+    margin: 10px auto;
+    border: none;
+    border-radius: 5px;
+    font-family: Avenir Next;
+    color: gray;
+    font-size: 13px;
+    text-indent: 5px   
+}
+
+#playgroundPage #answerSubmit {
+    width: 150px;
+    height: 40px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-family: Avenir Next;
+    color: white;
+    font-weight: 600;
+    font-size: 17px;
+    background-color: #1dd1a1;
+}
+
+#newConfirmBtn {
     width: 150px;
     height: 45px;
     margin: 10px auto;

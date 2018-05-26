@@ -1,27 +1,77 @@
+<!-- Login screen -->
+
 <html>
     <head>
         <title>SNT June Camp 18</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="./styles.css">
+        <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
         <script src="./app.js"></script>
     </head>
 
     <body>
         
-        <div id="header">
-            <div id="left">
-                <!-- <img src="image.jpg" alt="logo" id="logo"> -->
-                <p id="logo">SNT June Camp 2018</p>
+        <div id="loginPage">
+            <div id="header">
+                <div id="left">
+                    <p id="logo">SNT June Camp 2018</p>
+                </div>
             </div>
-
-            <div id="right">
-                <p id="teamID">Team 1</p>
-                <p id="currency">Flexbucks: </p>
-                <p id="current-activity-timer">Timer: </p>
+    
+            <div id="login-box">
+                <p>Welcome to <strong>SnT June Camp 2018!</strong> We hope that you enjoy throughout the duration of this camp. Without further ado, let's play!</p>
+                <select name="Choose team" id="teamChoose">
+                    <option value="Team 1">Team 1</option>
+                    <option value="Team 2">Team 2</option>
+                    <option value="Team 3">Team 3</option>
+                    <option value="Team 4">Team 4</option>
+                    <option value="Team 5">Team 5</option>
+                </select>
+                <input type="text" placeholder="Email" id="email"> 
+                <input type="password" placeholder="Password" id="password"> 
+                <input type="button" value="Login" id="login">
             </div>
         </div>
 
-        #
+        <div id="playgroundPage">
+            <div id="header">
+                <div id="left">
+                    <p id="logo">SNT June Camp 2018</p>
+                </div>
+    
+                <div id="right">
+                    <p id="team-id"></p>
+                    <p id="team-currency"></p>
+                    <p id="team-timer"></p>
+                </div>
+            </div>
+    
+            <div id="game-code">
+                <p id="text">Please enter the station code:</p>
+                <input type="text" placeholder="A1CD4" id="gameID">
+                <input type="button" value="Confirm" id="confirmID">
+            </div>
+    
+            <div id="playground">
+                <div id="pg-textbox">
+                    <!-- <p id="pg-gamecode"></p> -->
+                    <p id="pg-question"></p>
+                    <p id="pg-hint"></p>
+    
+                    <p class="pg-option" id="pg-option1"></p>
+                    <p class="pg-option" id="pg-option2"></p>
+                    <p class="pg-option" id="pg-option3"></p>
+                    <p class="pg-option" id="pg-option4"></p>
+    
+                    <div id="answerDiv" style="display: inline-flex">
+                        <p>Enter your answer [1, 2, 3, 4] </p>
+                        <input type="text" id="answerBox">
+                    </div>
+                    <br>
+                    <input type="button" value="Submit" id="answerSubmit">
+                </div>
+            </div>
+        </div>
 
     </body>
 </html>

@@ -1,11 +1,11 @@
 var config = {
-    apiKey: "AIzaSyChdbOclLmne3t9Cl9I68U5cSBLHv9kLxI",
-    authDomain: "june-camp.firebaseapp.com",
-    databaseURL: "https://june-camp.firebaseio.com",
-    projectId: "june-camp",
+    apiKey: "AIzaSyD-cFVmZKWmjKqs9fLbmczU_JwomdgJwo0",
+    authDomain: "snt-june-camp.firebaseapp.com",
+    databaseURL: "https://snt-june-camp.firebaseio.com",
+    projectId: "snt-june-camp",
     storageBucket: "",
-    messagingSenderId: "1015045375537"
-};
+    messagingSenderId: "304983406415"
+  };
 firebase.initializeApp(config);
 var firebaseRef = firebase.database().ref();
 var currentTeam = "";

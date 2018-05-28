@@ -5,16 +5,9 @@ var config = {
     projectId: "june-camp",
     storageBucket: "",
     messagingSenderId: "1015045375537"
-<<<<<<< HEAD
 };
 firebase.initializeApp(config);
 var firebaseRef = firebase.database().ref();
-=======
-  };
-firebase.initializeApp(config);
-var firebaseRef = firebase.database().ref();
-
->>>>>>> e1615d9a5f81e3ac428f176e083c3c42326e1575
 var currentTeam = "";
 
 function startTimer(duration, display) {

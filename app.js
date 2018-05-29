@@ -85,7 +85,7 @@ function beginGames(team, teamData) {
 
 function loadGame(box, team, GAMECODE) {
     console.log('Loading Game...')
-    var playground = document.getElementById('playground');
+    var playground = document.getElementById('playground')
     var pgQuestion = document.getElementById('pg-question')
     var pgImage = document.getElementById('pg-image')
     var pgOption1 = document.getElementById('pg-option1')
@@ -112,8 +112,13 @@ function loadGame(box, team, GAMECODE) {
                 // Give next location
                 firebaseRef.child("Route").once("value", function(routeshot) {
                     firebaseRef.child("Teams").child(team).child("GameIndex").once("value").then(function(indexshot) {
-                        window.alert('The next Gamecode is at this location: ' + routeshot.val()[indexshot.val()])
-                        firebaseRef.child("Teams").child(team).child("GameIndex").set(indexshot.val() + 1)
+                        if (indexshot.val() == 10) {
+                            window.alert("Congratulations, You have finished all 10 questions! Your final Flex Bucks ")
+                            location.reload()
+                        } else {
+                            window.alert('The next Gamecode is at this location: ' + routeshot.val()[indexshot.val()])
+                            firebaseRef.child("Teams").child(team).child("GameIndex").set(indexshot.val() + 1)
+                        }
                     })
                     firebaseRef.child("Teams").child(team).child("Flex Bucks").once("value", function(FBshot) {
                         var currentFB = FBshot.val()
@@ -128,8 +133,13 @@ function loadGame(box, team, GAMECODE) {
                 // Give next location
                 firebaseRef.child("Route").once("value", function(routeshot) {
                     firebaseRef.child("Teams").child(team).child("GameIndex").once("value").then(function(indexshot) {
-                        window.alert('The next Gamecode is at this location: ' + routeshot.val()[indexshot.val()])
-                        firebaseRef.child("Teams").child(team).child("GameIndex").set(indexshot.val() + 1)
+                        if (indexshot.val() == 10) {
+                            window.alert("Congratulations, You have finished all 10 questions! Your final Flex Bucks ")
+                            location.reload()
+                        } else {
+                            window.alert('The next Gamecode is at this location: ' + routeshot.val()[indexshot.val()])
+                            firebaseRef.child("Teams").child(team).child("GameIndex").set(indexshot.val() + 1)
+                        }
                     })
                     firebaseRef.child("Teams").child(team).child("Flex Bucks").once("value", function(FBshot) {
                         var currentFB = FBshot.val()
@@ -149,10 +159,12 @@ function loadGame(box, team, GAMECODE) {
                 firebaseRef.child("Route").once("value", function(routeshot) {
                     firebaseRef.child("Teams").child(team).child("GameIndex").once("value").then(function(indexshot) {
                         if (indexshot.val() == 10) {
-                            window.alert("Congratulations, You have finished all 10 questions! Your final Flex Bucks ")
+                            window.alert("Congratulations, You have finished all 10 questions! You may now return to your starting location.")
+                            location.reload()
+                        } else {
+                            window.alert('The next Gamecode is at this location: ' + routeshot.val()[indexshot.val()])
+                            firebaseRef.child("Teams").child(team).child("GameIndex").set(indexshot.val() + 1)
                         }
-                        window.alert('The next Gamecode is at this location: ' + routeshot.val()[indexshot.val()])
-                        firebaseRef.child("Teams").child(team).child("GameIndex").set(indexshot.val() + 1)
                     })
                     firebaseRef.child("Teams").child(team).child("Flex Bucks").once("value", function(FBshot) {
                         var currentFB = FBshot.val()

@@ -113,7 +113,7 @@ function loadGame(box, team, GAMECODE) {
                 firebaseRef.child("Route").once("value", function(routeshot) {
                     firebaseRef.child("Teams").child(team).child("GameIndex").once("value").then(function(indexshot) {
                         if (indexshot.val() == 10) {
-                            window.alert("Congratulations, You have finished all 10 questions! Your final Flex Bucks ")
+                            window.alert("Congratulations, You have finished all 10 questions! You may now return to your starting location.")
                             location.reload()
                         } else {
                             window.alert('The next Gamecode is at this location: ' + routeshot.val()[indexshot.val()])
@@ -134,7 +134,7 @@ function loadGame(box, team, GAMECODE) {
                 firebaseRef.child("Route").once("value", function(routeshot) {
                     firebaseRef.child("Teams").child(team).child("GameIndex").once("value").then(function(indexshot) {
                         if (indexshot.val() == 10) {
-                            window.alert("Congratulations, You have finished all 10 questions! Your final Flex Bucks ")
+                            window.alert("Congratulations, You have finished all 10 questions! You may now return to your starting location.")
                             location.reload()
                         } else {
                             window.alert('The next Gamecode is at this location: ' + routeshot.val()[indexshot.val()])

@@ -36,8 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // PlaygroundView.style.display = "none";
 
     // var emailID = document.getElementById('email');
-    // var password = document.getElementById('password');
-    var password = "Y4M10L";
+    var password = document.getElementById('password');
     var team = document.getElementById('teamChoose');
     var loginBtn = document.getElementById('login');
 
@@ -46,10 +45,10 @@ document.addEventListener('DOMContentLoaded', function() {
             snapshot.forEach(function(child) {
                 currentTeamData.push(child.val())
             })
-            if (password != currentTeamData[2]) {
+            if (password.value != currentTeamData[2]) {
                 window.alert('Invalid credentials. Try again...')
                 password.value = ""
-            } else if (password === currentTeamData[2]) {
+            } else if (password.value === currentTeamData[2]) {
                 LoginView.style.display = "none";
                 PlaygroundView.style.display = "block";
                 currentTeam = team.value;

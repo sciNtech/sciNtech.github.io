@@ -32,6 +32,8 @@ function firebase_config() {
     
 }
 
+// firebase_config()
+
 document.addEventListener('DOMContentLoaded', function() {
 
     console.log('App loaded')
@@ -105,6 +107,15 @@ function loadGame(box, team, GAMECODE) {
         pgOption2.innerText = "2. " + snapshot.val()['Options']['Option 2']
         pgOption3.innerText = "3. " + snapshot.val()['Options']['Option 3']
         pgOption4.innerText = "4. " + snapshot.val()['Options']['Option 4']
+        if (GAMECODE == '06IQH') {
+            pgImage.src = 'resistance_chart.jpg'
+        } else if (GAMECODE == 'P3S7R') {
+            pgImage.src = 'capacitor.jpg'
+        } else if (GAMECODE == 'XAMIK') {
+            pgImage.src = 'transistor.jpg'
+        } else {
+            pgImage.style.display = 'none';
+        }
 
         submitBtn.addEventListener('click', function() {
             if (answerBox.value == snapshot.val()['Correct']) {
@@ -149,33 +160,6 @@ function loadGame(box, team, GAMECODE) {
                 answerBox.value = ''
                 playground.style.visibility = "hidden";
                 box.style.visibility = "visible";
-            }
-        })
-
-        skipBtn.addEventListener('click', function() {
-            var task = window.confirm('Skipping a question will lead to a reduction of 15 points. Are you sure?')
-            if (task) {
-                // Go to next question  
-                firebaseRef.child("Route").once("value", function(routeshot) {
-                    firebaseRef.child("Teams").child(team).child("GameIndex").once("value").then(function(indexshot) {
-                        if (indexshot.val() == 10) {
-                            window.alert("Congratulations, You have finished all 10 questions! You may now return to your starting location.")
-                            location.reload()
-                        } else {
-                            window.alert('The next Gamecode is at this location: ' + routeshot.val()[indexshot.val()])
-                            firebaseRef.child("Teams").child(team).child("GameIndex").set(indexshot.val() + 1)
-                        }
-                    })
-                    firebaseRef.child("Teams").child(team).child("Flex Bucks").once("value", function(FBshot) {
-                        var currentFB = FBshot.val()
-                        firebaseRef.child("Teams").child(team).child("Flex Bucks").set(currentFB - 15);
-                    })
-                })
-                answerBox.value = ''
-                playground.style.visibility = "hidden";
-                box.style.visibility = "visible";
-            } else {
-                console.log('Continuing question...')
             }
         })
 

@@ -24,24 +24,18 @@ select:focus {
     width: 100%;
     height: 80px;
     background-color: #ff6b6b;
-    display: inline-flex;
+    text-align: center
 }
 
-#header #left {
-    position: absolute;
-    top: 25px;
-    left: 20px;
-}
-
-#header #left p {
-    margin: 0 30px;
+#header p {
+    padding-top: 25px;
     color: white;
     font-size: 20px;
 }
 
 #login-box {
-    width: 500px;
-    height: 450px;
+    width: 80%;
+    height: 80%;
     background-color: #feca57;
     margin: 25px auto;
     text-align: center;
@@ -58,7 +52,7 @@ select:focus {
 }
 
 #login-box #email, #login-box #password {
-    width: 400px;
+    width: 90%;
     height: 45px;
     margin: 10px auto;
     border: none;
@@ -70,7 +64,7 @@ select:focus {
 }
 
 #login-box #teamChoose {
-    width: 400px;
+    width: 90%;
     height: 45px;
     font-family: Avenir Next;
     font-size: 13px;
@@ -94,41 +88,25 @@ select:focus {
 
 #playgroundPage #header {
     width: 100%;
-    height: 80px;
+    height: 70px;
     background-color: #ff6b6b;
-    display: inline-flex;
+    text-align: center;
 }
 
-#playgroundPage #header #left {
-    position: absolute;
-    top: 25px;
-    left: 30px;
-}
-
-#playgroundPage #header #left p {
-    margin: 0 30px;
+#playgroundPage #header p {
+    padding-top: 25px;
     color: white;
     font-size: 20px;
 }
 
-#playgroundPage #header #right {
-    position: absolute;
-    top: 30px;
-    right: 50px;
-    display: inline-flex;
-}
-
-#playgroundPage #header #right p {
-    margin: 0 30px;
-    color: white;
-    font-size: 15px;
-}
-
 #playgroundPage #playground {
-    width: 80%;
-    min-height: 80%;
+    position: absolute;
+    bottom: 0;
+    top: 70px;
+    right: 0;
+    left: 0;
     background-color: #54a0ff;
-    margin: 10px auto;
+    margin: 0 auto;
     visibility: hidden;
 }
 
@@ -181,10 +159,9 @@ select:focus {
 
 #playgroundPage #pg-textbox {
     position: relative;
-    width: 80%;
-    min-height: 80%;
+    width: 90%;
+    height: 90%;
     margin: 0 auto;
-    top: 20px;
 }
 
 #playgroundPage #pg-gamecode {
@@ -206,6 +183,11 @@ select:focus {
     font-weight: 500;
     font-size: 17px;
     color: white;
+}
+
+#playgroundPage .pg-image {
+    width: 150px;
+    margin: 10px;
 }
 
 #playgroundPage #answerDiv p {

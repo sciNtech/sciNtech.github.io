@@ -26,7 +26,7 @@
                     <option value="Team 3">Team 3</option>
                     <option value="Team 4">Team 4</option>
                 </select>
-                <input type="text" placeholder="Email" id="email"> 
+                <!-- <input type="text" placeholder="Email" id="email">  -->
                 <input type="password" placeholder="Password" id="password"> 
                 <input type="button" value="Login" id="login">
             </div>
@@ -46,31 +46,29 @@
             </div>
     
             <div id="game-code">
+                <strong><p id="next-station-giver"></p></strong>
                 <p id="text">Please enter the station code:</p>
                 <input type="text" placeholder="A1CD4" id="gameCode">
                 <input type="button" value="Confirm" id="confirmID">
             </div>
     
             <div id="playground">
-                <div id="pg-textbox">
-                    <!-- <p id="pg-gamecode"></p> -->
-                    <p id="pg-question"></p>
+                <p id="pg-question"></p>
 
-                    <img alt="pg-img" id="pg-image">
-    
-                    <p class="pg-option" id="pg-option1"></p>
-                    <p class="pg-option" id="pg-option2"></p>
-                    <p class="pg-option" id="pg-option3"></p>
-                    <p class="pg-option" id="pg-option4"></p>
-    
-                    <div id="answerDiv" style="display: inline-flex">
-                        <p>Enter your answer [1, 2, 3, 4] </p>
-                        <br>
-                        <input type="text" id="answerBox">
-                    </div>
+                <img alt="pg-img" id="pg-image">
+
+                <p class="pg-option" id="pg-option1"></p>
+                <p class="pg-option" id="pg-option2"></p>
+                <p class="pg-option" id="pg-option3"></p>
+                <p class="pg-option" id="pg-option4"></p>
+
+                <div id="answerDiv" style="display: inline-flex">
+                    <p>Enter your answer [1, 2, 3, 4] </p>
                     <br>
-                    <input type="button" value="Submit" id="answerSubmit">
+                    <input type="text" id="answerBox">
                 </div>
+                <br>
+                <input type="button" value="Submit" id="answerSubmit">
             </div>
         </div>
 

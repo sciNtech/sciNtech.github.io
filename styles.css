@@ -35,7 +35,7 @@ select:focus {
 
 #login-box {
     width: 80%;
-    height: 80%;
+    height: 65%;
     background-color: #feca57;
     margin: 25px auto;
     text-align: center;
@@ -111,8 +111,8 @@ select:focus {
 }
 
 #playgroundPage #game-code {
-    width: 300px;
-    height: 200px;
+    width: 90%;
+    height: 250px;
     background-color: #feca57;
     border-radius: 5px;
     margin: 100px auto;
@@ -124,6 +124,11 @@ select:focus {
     left: 0;
     right: 0;
     z-index: 1000;
+}
+
+#playgroundPage #game-code #new-station-giver {
+    padding: 0;
+    margin: 0;
 }
 
 #playgroundPage #game-code p {
@@ -157,43 +162,30 @@ select:focus {
     border-radius: 5px;
 }
 
-#playgroundPage #pg-textbox {
-    position: relative;
-    width: 90%;
-    height: 90%;
-    margin: 0 auto;
-}
-
-#playgroundPage #pg-gamecode {
-    font-weight: 600;
-    font-size: 17px;
-    color: white;
-}
-
 #playgroundPage #pg-question {
     font-size: 20px;
     color: white;
-}
-
-#playgroundPage #pg-hint {
-    visibility: hidden;
+    padding-left: 10px;
 }
 
 #playgroundPage .pg-option {
     font-weight: 500;
     font-size: 17px;
     color: white;
+    padding-left: 10px;
 }
 
 #playgroundPage .pg-image {
     width: 150px;
     margin: 10px;
+    padding-left: 10px;
 }
 
 #playgroundPage #answerDiv p {
     color: white;
     font-size: 17px;
     padding-right: 10px;
+    padding-left: 10px;
 }
 
 #playgroundPage #answerBox {
@@ -205,13 +197,14 @@ select:focus {
     font-family: Avenir Next;
     color: gray;
     font-size: 13px;
+    padding-left: 10px;
     text-indent: 5px   
 }
 
 #playgroundPage #answerSubmit {
     width: 150px;
     height: 40px;
-    margin: 10px 0;
+    margin: 10px 10px;
     border: none;
     border-radius: 5px;
     font-family: Avenir Next;
@@ -219,52 +212,9 @@ select:focus {
     font-weight: 600;
     font-size: 17px;
     background-color: #1dd1a1;
+    padding-left: 10px;
 }
 
 #playgroundPage #answerSubmit:hover {
     color: gold;
-}
-
-#playgroundPage #skipQ {
-    width: 110px;
-    height: 30px;
-    border: none;
-    color: blue;
-    font-family: Avenir Next;
-    background: none;
-    font-size: 13px;
-    text-decoration: underline;
-}
-
-#playgroundPage #skipQ:hover {
-    color: gold;
-}
-
-#playgroundPage #new-station-giver {
-    width: 300px;
-    height: 200px;
-    background-color: #feca57;
-    border-radius: 5px;
-    margin: 100px auto;
-    display: none;
-    text-align: center;
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-}
-
-#confirm-location {
-    width: 150px;
-    height: 45px;
-    margin: 10px auto;
-    border: none;
-    border-radius: 5px;
-    font-family: Avenir Next;
-    color: white;
-    font-weight: 600;
-    font-size: 17px;
-    background-color: #1dd1a1;
 }
